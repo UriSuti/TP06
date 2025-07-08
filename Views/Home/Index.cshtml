@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Equipo";
+}
+
+<div>
+    <img src="Imágenes/pesuti.png" alt="logo">
+    <h1>Integrantes del grupo:</h1>
+    @foreach(Integrante integrante in ViewBag.Integrantes.Values)
+    {
+        <p>Nombre: @integrante.datosPersonales.nombre</p>
+        <p>Apellido: @integrante.datosPersonales.apellido</p>
+        <a href='@Url.Action("SelectIntegrante", "Home", new {dni = integrante.dni})'>Datos Personales</a>
+        <a href='@Url.Action("MostrarDatosFamiliares", "Home", new {dni = integrante.dni})'>Datos Familiares</a>
+        <a href='@Url.Action("MostrarDatosIntereses", "Home", new {dni = integrante.dni})'>Datos Intereses</a>
+    }
+</div>

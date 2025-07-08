@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Datos Intereses";
+}
+
+<div>
+    <h1>Intereses:</h1>
+    <p>Hobbies: @ViewBag.DatosInteres.hobbies</p>
+    <p>Series Favoritas: @ViewBag.DatosInteres.seriesFavoritas</p>
+    <p>Amigos: @ViewBag.DatosInteres.amigos</p>
+    <p>Gustos Escolares: @ViewBag.DatosInteres.gustosEscolares</p>
+    <a href='@Url.Action("Index", "Home")'>Volver a la página principal</a>
+</div>
