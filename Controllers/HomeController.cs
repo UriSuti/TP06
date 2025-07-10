@@ -18,18 +18,32 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Login(string email, string contraseña)
+    {
+        int idd = BD.Login(email, contraseña);
+        HttpContext.Session.SetString("id", idd.ToString());
+        ViewBag.Id = idd;
+        return View("Index");
+    }
+
     public IActionResult SelectIntegrante(int dni)
     {
+        int id = int.Parse(HttpContext.Session.GetString("id"));
+        ViewBag.Id = id;
         return View("infoDatosPersonales");
     }
 
     public IActionResult MostrarDatosFamiliares(int dni)
     {
+        int id = int.Parse(HttpContext.Session.GetString("id"));
+        ViewBag.Id = id;
         return View("infoDatosFamiliares");
     }
 
     public IActionResult MostrarDatosIntereses(int dni)
     {
+        int id = int.Parse(HttpContext.Session.GetString("id"));
+        ViewBag.Id = id;
         return View("infoDatosIntereses");
     }
 }
