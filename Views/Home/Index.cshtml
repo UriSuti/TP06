@@ -1,9 +1,12 @@
 ﻿@{
-    ViewData["Title"] = "Equipo";
+    ViewData["Title"] = "Primera view";
 }
 
 <div>
     <img src="Imágenes/pesuti.png" alt="logo">
-    <!-- form de login -->
-    <!-- link para desloguearse -->
+    <form action='@Url.Action("Login", "Home")' method="POST" enctype="multipart/form-data">
+        <input type="email" name="email">
+        <input type="password" name="contraseña">
+        <input type="submit">
+    </form>
 </div>
