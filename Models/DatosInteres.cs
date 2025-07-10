@@ -2,16 +2,15 @@ namespace TP02.Models;
 
 public class DatosInteres
 {
-    public string hobbies { get; private set; }
-    public string seriesFavoritas { get; private set; }
-    public string amigos { get; private set; }
-    public string gustosEscolares { get; private set; }
+    public int id { get; private set; }
+    public int idUsuario { get; private set; }
+    public int tipoInteres { get; private set; } // 1: Hobby, 2: Serie, 3: Amigo, 4: Gusto
+    public string interes { get; private set; }
 
-    public DatosInteres(string hobbies, string seriesFavoritas, string amigos, string gustosEscolares)
+    public DatosInteres(int idUsuario, int tipoInteres, string interes)
     {
-        this.hobbies = hobbies;
-        this.seriesFavoritas = seriesFavoritas;
-        this.amigos = amigos;
-        this.gustosEscolares = gustosEscolares;
+        this.idUsuario = idUsuario;
+        this.tipoInteres = tipoInteres;
+        this.interes = interes;
     }
 }
