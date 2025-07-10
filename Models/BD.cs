@@ -9,8 +9,8 @@ namespace TP02.Models;
 
 public static class BD
 {
-    private static string _connectionString = @"Server=localhost;DataBase=NombreBase;Integrated Security=True;TrustServerCertificate=True;";
-    public int Login(string email, string contraseña)
+    private static string _connectionString = @"Server=localhost;DataBase=TP06;Integrated Security=True;TrustServerCertificate=True;";
+    public static int Login(string email, string contraseña)
     {
         int id = -1;
         using(SqlConnection connection = new SqlConnection(_connectionString))
@@ -21,7 +21,7 @@ public static class BD
         return id;
     }
 
-    public DatoPersonal GetUsuario(int id)
+    public static DatoPersonal GetUsuario(int id)
     {
         DatoPersonal usuarioBuscar = null;
         using(SqlConnection connection = new SqlConnection(_connectionString))
@@ -32,7 +32,7 @@ public static class BD
         return usuarioBuscar;
     }
 
-    public List<DatoFamiliar> GetDatosFamiliares(int id)
+    public static List<DatoFamiliar> GetDatosFamiliares(int id)
     {
         List<DatoFamiliar> datosFamiliares = new List<DatoFamiliar>();
         using(SqlConnection connection = new SqlConnection(_connectionString))
@@ -43,7 +43,7 @@ public static class BD
         return datosFamiliares;
     }
 
-    public List<DatosInteres> GetDatosInteres(int id)
+    public static List<DatosInteres> GetDatosInteres(int id)
     {
         List<DatosInteres> datosInteres = new List<DatosInteres>();
         using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -53,5 +53,4 @@ public static class BD
         }
         return datosInteres;
     }
-
 }
