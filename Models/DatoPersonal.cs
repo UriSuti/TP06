@@ -10,7 +10,7 @@ public class DatoPersonal
     public DateTime fechaNacimiento { get; private set; }
     public string foto { get; private set; }
 
-    public DatoPersonal(string nombre, string apellido, DateTime fechaNacimiento)
+    public DatoPersonal(int id, string nombre, string apellido, string email, string contraseña, DateTime fechaNacimiento, string foto)
     {
         this.nombre = nombre;
         this.apellido = apellido;

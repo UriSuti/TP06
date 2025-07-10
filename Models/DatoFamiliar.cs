@@ -9,8 +9,10 @@ public class DatoFamiliar
     public string parentesco { get; private set; }
     public string descripcion { get; private set; }
 
-    public DatoFamiliar(string nombre, string apellido, string parentesco, string descripcion)
+    public DatoFamiliar(int id, int idUsuario, string nombre, string apellido, string parentesco, string descripcion)
     {
+        this.id = id;
+        this.idUsuario = idUsuario;
         this.nombre = nombre;
         this.apellido = apellido;
         this.parentesco = parentesco;

@@ -7,8 +7,9 @@ public class DatosInteres
     public int tipoInteres { get; private set; } // 1: Hobby, 2: Serie, 3: Amigo, 4: Gusto
     public string interes { get; private set; }
 
-    public DatosInteres(int idUsuario, int tipoInteres, string interes)
+    public DatosInteres(int id, int idUsuario, int tipoInteres, string interes)
     {
+        this.id = id;
         this.idUsuario = idUsuario;
         this.tipoInteres = tipoInteres;
         this.interes = interes;
