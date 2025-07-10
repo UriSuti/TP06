@@ -2,26 +2,26 @@ namespace TP02.Models;
 
 public class DatoPersonal
 {
-    public int id { get; private set; }
-    public string nombre { get; private set; }
-    public string apellido { get; private set; }
-    public string email { get; private set; }
-    public string contraseña { get; private set; }
-    public DateTime fechaNacimiento { get; private set; }
-    public string foto { get; private set; }
+    public int Id { get; private set; }
+    public string Nombre { get; private set; }
+    public string Apellido { get; private set; }
+    public string Email { get; private set; }
+    public string Contraseña { get; private set; }
+    public DateTime FechaNacimiento { get; private set; }
+    public string Foto { get; private set; }
 
-    public DatoPersonal(int id, string nombre, string apellido, string email, string contraseña, DateTime fechaNacimiento, string foto)
+    public DatoPersonal(int Id, string Nombre, string Apellido, string Email, string Contraseña, DateTime FechaNacimiento, string Foto)
     {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.fechaNacimiento = fechaNacimiento;
+        this.Nombre = Nombre;
+        this.Apellido = Apellido;
+        this.FechaNacimiento = FechaNacimiento;
     }
 
     public int obtenerEdad()
     {
-        int edad = DateTime.Now.Year - fechaNacimiento.Year;
+        int edad = DateTime.Now.Year - FechaNacimiento.Year;
 
-        if (DateTime.Now.Month < fechaNacimiento.Month || DateTime.Now.Month == fechaNacimiento.Month && DateTime.Now.Day < fechaNacimiento.Day)
+        if (DateTime.Now.Month < FechaNacimiento.Month || DateTime.Now.Month == FechaNacimiento.Month && DateTime.Now.Day < FechaNacimiento.Day)
         {
             edad--;
         }

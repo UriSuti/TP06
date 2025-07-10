@@ -2,20 +2,20 @@ namespace TP02.Models;
 
 public class DatoFamiliar
 {
-    public int id { get; private set; }
-    public int idUsuario { get; private set; }
-    public string nombre { get; private set; }
-    public string apellido { get; private set; }
-    public string parentesco { get; private set; }
-    public string descripcion { get; private set; }
+    public int Id { get; private set; }
+    public int IdUsuario { get; private set; }
+    public string Nombre { get; private set; }
+    public string Apellido { get; private set; }
+    public string Parentesco { get; private set; }
+    public string Descripcion { get; private set; }
 
-    public DatoFamiliar(int id, int idUsuario, string nombre, string apellido, string parentesco, string descripcion)
+    public DatoFamiliar(int Id, int IdUsuario, string Nombre, string Apellido, string Parentesco, string Descripcion)
     {
-        this.id = id;
-        this.idUsuario = idUsuario;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.parentesco = parentesco;
-        this.descripcion = descripcion;
+        this.Id = Id;
+        this.IdUsuario = IdUsuario;
+        this.Nombre = Nombre;
+        this.Apellido = Apellido;
+        this.Parentesco = Parentesco;
+        this.Descripcion = Descripcion;
     }
 }
