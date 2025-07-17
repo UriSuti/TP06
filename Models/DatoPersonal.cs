@@ -16,7 +16,10 @@ public class DatoPersonal
         this.Apellido = Apellido;
         this.FechaNacimiento = FechaNacimiento;
     }
-
+    public DatoPersonal()
+    {
+        
+    }
     public int obtenerEdad()
     {
         int edad = DateTime.Now.Year - FechaNacimiento.Year;

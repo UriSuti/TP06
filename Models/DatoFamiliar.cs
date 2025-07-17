@@ -7,7 +7,7 @@ public class DatoFamiliar
     public string Nombre { get; private set; }
     public string Apellido { get; private set; }
     public string Parentesco { get; private set; }
-    public string Descripcion { get; private set; }
+    public string Descripción { get; private set; }
 
     public DatoFamiliar(int Id, int IdUsuario, string Nombre, string Apellido, string Parentesco, string Descripcion)
     {
@@ -16,6 +16,11 @@ public class DatoFamiliar
         this.Nombre = Nombre;
         this.Apellido = Apellido;
         this.Parentesco = Parentesco;
-        this.Descripcion = Descripcion;
+        this.Descripción = Descripcion;
     }
+    public DatoFamiliar()
+    {
+
+    }
+
 }

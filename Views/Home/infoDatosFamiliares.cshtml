@@ -4,12 +4,12 @@
 
 <div>
     <h1>Familiares:</h1>
-        @foreach (DatoFamiliar datoFamiliar in ViewBag.DatosFamiliares)
+        @foreach (DatoFamiliar df in ViewBag.datoFamiliar)
         {
-                <p>Nombre: @datoFamiliar.nombre</p>
-                <p>Apellido: @datoFamiliar.apellido</p>
-                <p>Parentesco: @datoFamiliar.parentesco</p>
-                <p>Descripción: @datoFamiliar.descripcion</p>
+            <p>Nombre: @df.Nombre</p>
+            <p>Apellido: @df.Apellido</p>
+            <p>Parentesco: @df.Parentesco</p>
+            <p>Descripción: @df.Descripción</p>
         }
     <a href='@Url.Action("Index", "Home")'>Volver a la página principal</a>
 </div>

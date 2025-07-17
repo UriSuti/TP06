@@ -34,23 +34,19 @@ public static class BD
 
     public static List<DatoFamiliar> GetDatosFamiliares(int id)
     {
-        List<DatoFamiliar> datosFamiliares = new List<DatoFamiliar>();
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
             string query = "SELECT * FROM DatoFamiliar WHERE IdUsuario = @pId";
-            datosFamiliares = connection.Query<DatoFamiliar>(query).ToList();
+            return connection.Query<DatoFamiliar>(query, new { pId = id }).ToList();
         }
-        return datosFamiliares;
     }
 
     public static List<DatosInteres> GetDatosInteres(int id)
     {
-        List<DatosInteres> datosInteres = new List<DatosInteres>();
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             string query = "SELECT * FROM DatosInteres WHERE IdUsuario = @pId";
-            datosInteres = connection.Query<DatosInteres>(query).ToList();
+            return connection.Query<DatosInteres>(query, new { pId = id }).ToList();
         }
-        return datosInteres;
     }
 }

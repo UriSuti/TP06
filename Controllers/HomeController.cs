@@ -21,43 +21,45 @@ public class HomeController : Controller
     public IActionResult Reiniciar()
     {
         HttpContext.Session.Remove("id");
-        return RedirectToAction(Index);
+        return RedirectToAction("Index");
     }
 
     [HttpPost]
     public IActionResult Login(string email, string contraseña)
     {
         int idd = BD.Login(email, contraseña);
+        if(idd==0){
+            return RedirectToAction("Index");
+        }
         HttpContext.Session.SetString("id", idd.ToString());
-        ViewBag.Id = idd;
+        ViewBag.usuario = BD.GetUsuario(idd);
         return View("Index2");
     }
 
     public IActionResult Index2()
     {
         int id = int.Parse(HttpContext.Session.GetString("id"));
-        ViewBag.Id = id;
         return View();
     }
 
     public IActionResult SelectIntegrante()
     {
         int id = int.Parse(HttpContext.Session.GetString("id"));
-        ViewBag.Id = id;
+        ViewBag.DatosPersonales = BD.GetUsuario(id);
         return View("infoDatosPersonales");
     }
 
     public IActionResult MostrarDatosFamiliares()
     {
         int id = int.Parse(HttpContext.Session.GetString("id"));
-        ViewBag.Id = id;
+        ViewBag.datoFamiliar = BD.GetDatosFamiliares(id);
         return View("infoDatosFamiliares");
     }
 
     public IActionResult MostrarDatosIntereses()
     {
         int id = int.Parse(HttpContext.Session.GetString("id"));
-        ViewBag.Id = id;
+        ViewBag.DatosInteres = BD.GetDatosInteres(id);
         return View("infoDatosIntereses");
     }
 }

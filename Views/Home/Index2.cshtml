@@ -1,6 +1,8 @@
-@ {
-    ViewData["Title"] = "Segunda view"
+@{
+    ViewData["Title"] = "Segunda view";
 }
+
+<h1>Bienvenido @ViewBag.usuario.Nombre</h1>
 
 <div>
     <a href='@Url.Action("SelectIntegrante", "Home")'>Ir a información del usuario</a>
