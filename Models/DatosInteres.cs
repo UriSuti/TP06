@@ -14,8 +14,4 @@ public class DatosInteres
         this.TipoInteres = TipoInteres;
         this.Interes = Interes;
     }
-    public DatosInteres()
-    {
-        
-    }
 }

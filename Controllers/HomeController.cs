@@ -28,7 +28,7 @@ public class HomeController : Controller
     public IActionResult Login(string email, string contraseña)
     {
         int idd = BD.Login(email, contraseña);
-        if(idd==0){
+        if(idd==-1){
             return RedirectToAction("Index");
         }
         HttpContext.Session.SetString("id", idd.ToString());
