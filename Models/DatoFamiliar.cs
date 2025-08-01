@@ -18,9 +18,4 @@ public class DatoFamiliar
         this.Parentesco = Parentesco;
         this.Descripción = Descripcion;
     }
-    public DatoFamiliar()
-    {
-
-    }
-
 }

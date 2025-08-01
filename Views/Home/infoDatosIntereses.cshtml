@@ -2,11 +2,28 @@
     ViewData["Title"] = "Datos Intereses";
 }
 
-<div>
-    <h1>Intereses:</h1>
-    <p>Series Favoritas: @ViewBag.DatosInteres.seriesFavoritas</p>
-    <p>Hobbies: @ViewBag.DatosInteres.hobbies</p>
-    <p>Amigos: @ViewBag.DatosInteres.amigos</p>
-    <p>Gustos Escolares: @ViewBag.DatosInteres.gustosEscolares</p>
-    <a href='@Url.Action("Index", "Home")'>Volver a la página principal</a>
-</div>
+<section>
+    <h1>Datos Intereses</h1>
+    @foreach(DatosInteres datosInteres in ViewBag.DatosIntereses)
+    {
+        <div>
+        @if (datosInteres.TipoInteres == 1)
+        {
+            <p><strong>Hobby:</strong> @datosInteres.Interes</p>
+        }
+        else if (datosInteres.TipoInteres == 2)
+        {
+            <p><strong>Serie:</strong> @datosInteres.Interes</p>
+        }
+        else if (datosInteres.TipoInteres == 3)
+        {
+            <p><strong>Amigo:</strong> @datosInteres.Interes</p>
+        }
+        else if (datosInteres.TipoInteres == 4)
+        {
+            <p><strong>Gusto:</strong> @datosInteres.Interes</p>
+        }
+        </div>
+    }
+    <a href='@Url.Action("Index2", "Home")'>Volver a la página principal</a>
+</section>

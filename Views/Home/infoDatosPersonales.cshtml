@@ -2,11 +2,11 @@
     ViewData["Title"] = "Datos Personales";
 }
 
-<div>
+<section>
     <h1>Datos Personales</h1>
-    <p>Nombre: @ViewBag.DatosPersonales.Nombre</p>
-    <p>Apellido: @ViewBag.DatosPersonales.Apellido</p>
-    <p>Fecha de Nacimiento: @ViewBag.DatosPersonales.FechaNacimiento</p>
-    <p>Edad: @ViewBag.DatosPersonales.obtenerEdad()</p>
-    <a href='@Url.Action("Index", "Home")'>Volver a la página principal</a>
-</div>
+    <p><strong>Nombre:</strong> @ViewBag.DatosPersonales.Nombre</p>
+    <p><strong>Apellido:</strong> @ViewBag.DatosPersonales.Apellido</p>
+    <p><strong>Fecha de Nacimiento:</strong> @ViewBag.DatosPersonales.FechaNacimiento</p>
+    <img src='@ViewBag.DatosPersonales.Foto' alt='Foto' />
+    <a href='@Url.Action("Index2", "Home")'>Volver a la página principal</a>
+</section>

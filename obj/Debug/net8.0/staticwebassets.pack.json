@@ -1,16 +1,12 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\uriel\\Downloads\\TP06\\wwwroot\\Imágenes\\ort.png",
-      "PackagePath": "staticwebassets\\Imágenes\\ort.png"
-    },
-    {
-      "Id": "C:\\Users\\uriel\\Downloads\\TP06\\wwwroot\\Imágenes\\pesuti.png",
-      "PackagePath": "staticwebassets\\Imágenes\\pesuti.png"
-    },
-    {
       "Id": "C:\\Users\\uriel\\Downloads\\TP06\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\uriel\\Downloads\\TP06\\wwwroot\\data\\script.sql",
+      "PackagePath": "staticwebassets\\data\\script.sql"
     },
     {
       "Id": "C:\\Users\\uriel\\Downloads\\TP06\\wwwroot\\favicon.ico",

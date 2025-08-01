@@ -2,14 +2,16 @@
     ViewData["Title"] = "Datos Familiares";
 }
 
-<div>
-    <h1>Familiares:</h1>
-        @foreach (DatoFamiliar df in ViewBag.datoFamiliar)
-        {
-            <p>Nombre: @df.Nombre</p>
-            <p>Apellido: @df.Apellido</p>
-            <p>Parentesco: @df.Parentesco</p>
-            <p>Descripción: @df.Descripción</p>
-        }
+<section>
+    <h1>Datos Familiares</h1>
+    @foreach(DatoFamiliar datosFamiliares in ViewBag.datoFamiliar)
+    {
+        <div>
+            <p><strong>Nombre:</strong> @datosFamiliares.Nombre</p>
+            <p><strong>Apellido:</strong> @datosFamiliares.Apellido</p>
+            <p><strong>Parentesco:</strong> @datosFamiliares.Parentesco</p>
+            <p><strong>Descripción:</strong> @datosFamiliares.Descripción</p>
+        </div>
+    }
     <a href='@Url.Action("Index2", "Home")'>Volver a la página principal</a>
-</div>
+</section>

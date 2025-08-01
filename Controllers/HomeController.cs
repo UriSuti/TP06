@@ -27,18 +27,20 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult Login(string email, string contraseña)
     {
-        int idd = BD.Login(email, contraseña);
-        if(idd==-1){
+        int id = BD.Login(email, contraseña);
+        if(id == -1)
+        {
             return RedirectToAction("Index");
         }
-        HttpContext.Session.SetString("id", idd.ToString());
-        ViewBag.usuario = BD.GetUsuario(idd);
+        HttpContext.Session.SetString("id", id.ToString());
+        ViewBag.usuario = BD.GetUsuario(id);
         return View("Index2");
     }
 
     public IActionResult Index2()
     {
         int id = int.Parse(HttpContext.Session.GetString("id"));
+        ViewBag.usuario = BD.GetUsuario(id);
         return View();
     }
 

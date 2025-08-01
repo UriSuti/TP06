@@ -3,10 +3,11 @@
 }
 
 <div>
-    <img src="Imágenes/pesuti.png" alt="logo">
     <form action='@Url.Action("Login", "Home")' method="POST" enctype="multipart/form-data">
+        <label>Email:</label>
         <input type="email" name="email">
+        <label>Contraseña:</label>
         <input type="password" name="contraseña">
-        <input type="submit">
+        <input type="submit" value="Ingresar">
     </form>
 </div>
